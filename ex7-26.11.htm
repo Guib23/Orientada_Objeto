@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        class Consorcio {
+    constructor() {
+        this.presttotal = 0;
+        this.quantpaga = 0;
+        this.valorprest = 0;
+        this.totpago = 0;
+        this.saldo = 0;
+    }
+    calculo() {
+        this.totpago = this.quantpaga * this.valorprest;
+        this.saldo = (this.presttotal * this.valorprest) - this.totpago;
+    }
+}
+let y = new Consorcio();
+y.presttotal = Number(prompt("Digite a quantidade de prestações:"));
+y.quantpaga = Number(prompt("Digite a quantidade de prestações pagas:"));
+y.valorprest = Number(prompt("Digite o valor da prestação:"));
+y.calculo();
+alert(`O valor total pago é ${y.totpago} O saldo devedor é  ${y.saldo}`);
+
+    </script>
+    
+</body>
+</html>

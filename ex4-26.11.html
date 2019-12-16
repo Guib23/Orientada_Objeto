@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+    class Quantidade {
+    constructor() {
+        this.salMin = 0;
+        this.salario = 0;
+        this.total=0;
+        
+    }
+    calculo() {
+        this.total = this.salario/this.salMin;
+        
+    }
+}
+let y = new Quantidade();
+y.salMin = Number(prompt("Digite o valor do salário mínimo:"));
+y.salario = Number(prompt("Digite o valor do salário"))
+y.calculo();
+alert(`Você ganha ${y.total.toFixed(1)} salários mínimos.`);
+    
+    </script>
+</body>
+</html>

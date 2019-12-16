@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        class Aposentado {
+    constructor() {
+        this.codemp = "";
+        this.anonasc = 0;
+        this.anoingre = 0;
+        this.idade = 0;
+        this.quantano= 0;
+    }
+    calculo() {
+        this.idade = 2019 - this.anonasc;
+        this.quantano = 2019 - this.anoingre;
+        if (this.idade >= 65 || this.quantano >= 30 || (this.idade >=60 && this.quantano >= 25)) {
+        alert("O Funcionario " + this.codemp + " pode se Aposentar!")
+        }else {
+            alert("O Funcionario " + this.codemp + " não pode se Aposentar!")
+        }
+    }
+}
+let y = new Aposentado();
+y.codeemp = Number(prompt("Digite o codigo do empregado:"));
+y.anonasc = Number(prompt("Digite o Ano de Nascimento do Empregado:"));
+y.anoingre = Number(prompt("Digite o Ano de ingresso na empresa:"));
+y.calculo();
+    </script>
+    
+</body>
+</html>

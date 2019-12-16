@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+    class Garçom {
+    constructor() {
+        this.gorjeta = 10;
+        this.comanda = 0;
+        this.total=0;
+        this.result=0;
+    }
+    calculo() {
+        this.total = this.comanda + (this.comanda*this.gorjeta / 100);
+        
+    }
+}
+let gor = new Garçom();
+gor.comanda = Number(prompt("Digite o valor da comanda:"));
+gor.calculo();
+alert(`O valor da refeição com gorjeta é ${gor.total} reais.`);
+    
+    
+    </script>
+</body>
+</html>

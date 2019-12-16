@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+    class Salario {
+    constructor() {
+        this.valorhora = 0;
+        this.numaulas = 0;
+        this.desconto = 0;
+        this.bruto = 0;
+        this.result = 0;
+    }
+    calculo() {
+        this.bruto = this.valorhora * this.numaulas;
+        this.desconto = this.bruto * this.desconto / 100;
+        this.result = this.bruto - this.desconto;
+    }
+}
+let sal = new Salario();
+sal.valorhora = Number(prompt("Digite o valor da hora aula"));
+sal.numaulas = Number(prompt("Digite o número de aulas"));
+sal.desconto = Number(prompt("Digite a percentual do INSS"));
+sal.calculo();
+alert(sal.result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+
+        class Emprestimo {
+            constructor() {
+                this.salBruto = 0;
+                this.salPrest = 0;
+                this.calMaximo = 0;
+            }
+            calculoMaximo() {
+                this.calMaximo = this.salBruto * 0.3;
+            }
+            operacao() {
+                if (this.salPrest < this.calMaximo) {
+                    alert(`Crédito Concedido!`);
+                }
+                else {
+                    alert(`Crédito Negado!`);
+                }
+            }
+        }
+        let resul = new Emprestimo();
+        resul.salBruto = Number(prompt("Digite o valor do sálario bruto:"));
+        resul.salPrest = Number(prompt("Digite o valor da prestação:"));
+        resul.calculoMaximo();
+        resul.operacao();
+
+
+    </script>
+</body>
+
+</html>

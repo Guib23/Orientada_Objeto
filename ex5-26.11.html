@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+        class ParEimpar {
+            constructor() {
+                this.val1 = 0;
+                this.val2 = 0;
+                this.resul1 = 0;
+            }
+            verificarMaior() {
+                if (this.val1 > this.val2) {
+                    this.resul1 = this.val1;
+                }
+                else {
+                    this.resul1 = this.val2;
+                }
+            }
+            seParOuImpar() {
+                if (this.resul1 % 2 == 0) {
+                    alert(`O maior número é ${this.resul1} e é um número Par`);
+                }
+                else {
+                    alert(`O maior número é ${this.resul1} e é um número Impar`);
+                }
+            }
+        }
+        let resul = new ParEimpar();
+        resul.val1 = Number(prompt("Digite o primeiro valor:"));
+        resul.val2 = Number(prompt("Digite o segundo valor:"));
+        resul.verificarMaior();
+        resul.seParOuImpar();
+
+    </script>
+</body>
+
+</html>
